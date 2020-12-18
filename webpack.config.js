@@ -9,10 +9,6 @@ module.exports = {
   module: {
     rules: [
       {
-        /**
-         * The above order of loaders should be maintained: 'style-loader' comes first and followed by 'css-loader'.
-         * If this convention is not followed, webpack is likely to throw errors.
-         */
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
@@ -23,6 +19,14 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.(csv|tsv)$/i,
+        use: ['csv-loader'],
+      },
+      {
+        test: /\.xml$/i,
+        use: ['xml-loader'],
       },
     ],
   },
