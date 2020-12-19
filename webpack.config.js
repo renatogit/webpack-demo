@@ -10,7 +10,8 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   plugins: [
-    new CleanWebpackPlugin(),
+    // Tell CleanWebpackPlugin that we don't want to remove the index.html file after the incremental build triggered by watch
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
       title: 'Development',
     }),
