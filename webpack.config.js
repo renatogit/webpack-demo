@@ -9,6 +9,10 @@ module.exports = {
     print: './src/print.js',
   },
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+    open: true,
+  },
   plugins: [
     // Tell CleanWebpackPlugin that we don't want to remove the index.html file after the incremental build triggered by watch
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
