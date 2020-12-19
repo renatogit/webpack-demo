@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import './style.css';
-import Icon from './icon.png';
-import Data from './data.xml';
-import Notes from './data.csv';
-import toml from './data.toml';
-import yaml from './data.yaml';
-import json from './data.json5';
+import Icon from 'assets/icon.png';
+import Data from 'mock/data.xml';
+import Notes from 'mock/data.csv';
+import toml from 'mock/data.toml';
+import yaml from 'mock/data.yaml';
+import json from 'mock/data.json5';
 
 console.log(toml.title); // output `TOML Example`
 console.log(toml.owner.name); // output `Tom Preston-Werner`

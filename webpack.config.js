@@ -4,6 +4,12 @@ const yaml = require('yamljs');
 const json5 = require('json5');
 
 module.exports = {
+  resolve: {
+    alias: {
+      mock: path.resolve(__dirname, 'src/mock/'),
+      assets: path.resolve(__dirname, 'src/assets/'),
+    },
+  },
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
